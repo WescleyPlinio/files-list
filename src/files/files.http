@@ -3,9 +3,28 @@ GET http://localhost:3000/files
 
 ### Adicionar arquivos
 POST http://localhost:3000/files
+Content-Type: application/json
+
+{
+    "name": "Wescley",
+    "url": "http://wescley.com",
+    "type": "PDF",
+    "size": 123
+}
 
 ### Ver arquivo
 GET http://localhost:3000/files/1
 
+### Ver arquivo
+PATCH  http://localhost:3000/files/3
+Content-Type: application/json
+
+{
+    "name": "Wescley",
+    "url": "http://render.com",
+    "type": "PDF",
+    "size": 123
+}
+
 ### Deletar arquivo
-DELETE http://localhost:3000/files/1
+DELETE http://localhost:3000/files/11

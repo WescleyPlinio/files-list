@@ -1,4 +1,5 @@
-import { IsDateString, IsString, IsUrl } from "class-validator"
+import { IsDateString, IsNumber, IsString, IsUrl } from "class-validator"
+import { CreateDateColumn } from "typeorm";
 
 export class CreateFileDto {
     
@@ -11,10 +12,10 @@ export class CreateFileDto {
     @IsString()
     type!: string; 
 
-    @IsString()
+    @IsNumber()
     size!: number; 
 
-    @IsDateString()
-    createdAt!: string; 
+    @CreateDateColumn()
+    createdAt!: Date; 
 
 }
