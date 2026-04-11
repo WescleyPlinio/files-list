@@ -1,0 +1,11 @@
+### Listagem de arquivos
+GET http://localhost:3000/files
+
+### Adicionar arquivos
+POST http://localhost:3000/files
+
+### Ver arquivo
+GET http://localhost:3000/files/1
+
+### Deletar arquivo
+DELETE http://localhost:3000/files/1
