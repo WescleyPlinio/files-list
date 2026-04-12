@@ -6,26 +6,14 @@
     "outDir": "./dist",
 
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "useDefineForClassFields": false,
 
     "sourceMap": true,
     "declaration": true,
-    "removeComments": true,
-    "incremental": true,
 
-    "skipLibCheck": true,
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
-
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false,
-
-    "types": ["node"]
+    "strict": true,
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"]
+  "include": ["src"]
 }
