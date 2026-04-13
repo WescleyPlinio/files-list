@@ -3,11 +3,11 @@ import { faFileImage, faTrash, faFilePdf, faFileExcel } from "@fortawesome/free-
 
 export default function File() {
     return (
-        <div className="grid grid-cols-8">
-            <div>
-                <FontAwesomeIcon className='text-white mx-auto' icon={faFileImage} />
+        <div className="grid grid-cols-7">
+            <div className="flex">
+                <FontAwesomeIcon className='m-auto text-2xl text-blue-600 mx-auto' icon={faFileImage} />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-3">
                 Muito texto
             </div>
             <div>
@@ -16,8 +16,8 @@ export default function File() {
             <div>
                 PNG
             </div>
-            <div>
-                <FontAwesomeIcon className='text-white mx-auto' icon={faTrash} />
+            <div className="flex">
+                <FontAwesomeIcon className='m-auto text-2xl text-blue-600 mx-auto' icon={faTrash} />
             </div>
         </div>
     )

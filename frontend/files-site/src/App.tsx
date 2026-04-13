@@ -1,6 +1,7 @@
 import './App.css'
 import UploadIcon from './components/UploadIcon'
 import File from './components/File'
+import InputFile from './components/InputFile'
 
 function App() {
   return (
@@ -15,14 +16,18 @@ function App() {
           <div className="w-full grid grid-rows-1 grid-cols-1">
             <div className="bg-blue-500 rounded-3xl flex flex-col m-auto p-15">
               <UploadIcon />
-              <input type="file" name="" id="" className='m-auto text-white' />
+              <InputFile/>
             </div>
           </div>
         </form>
       </header>
-      <div className="w-full bg-black">
-        <File></File>
-      </div>
+      <main className='container mx-auto'>
+        <div className="grid grid-cols-6 rounded">
+          <div className='col-span-4 col-start-2 rounded-2xl py-2 bg-white'>
+            <File></File>
+          </div>
+        </div>
+      </main>
     </>
   )
 }
