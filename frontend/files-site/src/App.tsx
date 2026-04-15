@@ -14,8 +14,7 @@ function App() {
       <header className='m-30'>
         <form action="" method="post" className='py-10'>
           <div className="w-full grid grid-rows-1 grid-cols-1">
-            <div className="bg-blue-500 rounded-3xl flex flex-col m-auto p-15">
-              <UploadIcon />
+            <div className="rounded-3xl flex flex-col m-auto p-15">
               <InputFile/>
             </div>
           </div>
@@ -23,7 +22,7 @@ function App() {
       </header>
       <main className='container mx-auto'>
         <div className="grid grid-cols-6 rounded">
-          <div className='col-span-4 col-start-2 rounded-2xl py-2 bg-white'>
+          <div className='col-span-4 col-start-2 rounded-2xl py-2 bg-gray-200'>
             <File></File>
           </div>
         </div>

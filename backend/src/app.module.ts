@@ -7,29 +7,22 @@ import { FilesModule } from './files/files.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: '.env',
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        host: configService.get<string>('DB_HOST'),
-        port: 5432,
-        username: configService.get<string>('DB_USERNAME'),
-        password: configService.get<string>('DB_PASSWORD'),
-        database: configService.get<string>('DB_DATABASE'),
-        entities: [__dirname + '/**/*.entity{.ts,.js}'],
-        synchronize: true, 
+        url: configService.get<string>('DATABASE_URL'),
         autoLoadEntities: true,
-        ssl: true,
-        extra: {
-          ssl: {
-            rejectUnauthorized: false,
-          },
+        synchronize: true,
+        ssl: {
+          rejectUnauthorized: false,
         },
       }),
     }),
     FilesModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
